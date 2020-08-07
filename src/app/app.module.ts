@@ -5,15 +5,25 @@ import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 
+import { UsersComponent } from './users/users.component';
+import { BlogComponent } from './blog/blog.component';
+import { AppRoutingModule } from './app-routing.module';
+
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UsersComponent,
+    BlogComponent
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
